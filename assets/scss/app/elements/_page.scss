@@ -1,0 +1,113 @@
+.singlepage-header-container {
+height: 60vh;
+background-image: url('../images/pagebg.png');
+background-repeat: no-repeat;
+background-position: 100% 0%;
+background-size: 100vw 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+@media (max-width:900px) {
+    height: auto;
+    background-image: none;
+}
+}
+
+.singlepage-header-container .header {
+    position: fixed;
+    top:0;
+    @media (max-width:900px) {
+        position: relative;
+    }
+}
+
+.singlepage {
+    @media (max-width:900px) {
+             
+              
+      margin-top: 40px;
+                }
+    &__header {
+        max-width: 60vw;
+        h1 {
+            text-align: center;
+            font-size: 64px;
+            font-weight: 700;
+            color: #64B0B8;
+            text-transform: uppercase;
+
+            @media (max-width:1400px) {
+                font-size: 40px;
+    
+    line-height: 45px;
+            }
+
+            @media (max-width:900px) {
+             
+              
+    line-height: 30px;
+            }
+        }
+    }
+
+    &__breadcrumbs {
+        .breadcrumbs.fixclear {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            align-items: center;
+
+            .breadcrumbs-item {
+                   display: flex;
+                   align-items: center;
+                &::before {
+                    content: '';
+    height: 5px;
+    width: 5px;
+    background-color: #C5CEEB;
+    display: block;
+    margin: 0px 15px;
+                }
+                a {
+                    color: #B5B5B5;
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-decoration: none;
+                }
+                span {
+                    color: #B5B5B5;
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-decoration: none;
+                }
+            }
+            .breadcrumbs-item:nth-child(1) {
+          
+             &::before {
+                 display: none;
+             }
+       
+         }
+        }
+    }
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        padding: 0 10vw;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    
+        @media (max-width:1600px) {
+            padding: 0px 2vw;
+        }
+    &.contact {
+        @media (max-width:1600px) {
+            padding: 0px 5vw;
+        }
+    }
+    }
+}
+

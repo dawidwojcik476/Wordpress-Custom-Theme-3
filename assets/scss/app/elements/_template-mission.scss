@@ -1,0 +1,66 @@
+.stars .mission__header {
+    h2 {
+        &::after {
+            content: '';
+            display: block;
+            background-image: url(../images/gwiazdkitło.png);
+            background-size: 96vw;
+            background-repeat: no-repeat;
+            position: absolute;
+            height: 140%;
+            width: 102vw;
+            bottom: -152px;
+            left:-8vw;
+            @media (max-width:1600px) {
+                left:0;
+            }
+        }
+    }
+}
+
+.mission {
+    margin-top: 65px;
+    color:#B5B5B5;
+    font-size: 20px;
+    &__header {
+        p {
+            margin-bottom: 65px;
+        }
+        h2 {
+            position: relative;
+            text-align: center;
+            font-size: 64px;
+            font-weight: 700;
+            color: #64B0B8;
+            text-transform: uppercase;
+            margin: 45px 0px;
+@media (max-width:900px) {
+    font-size: 40px;
+}
+
+        }
+        img {
+                width: 100%;
+        }
+        &::after {
+            content: '';
+            width: 80vw;
+            border-bottom: 2px dashed #112818;
+            display: block;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 65px;
+        }
+    }
+
+    &__content {
+        img {
+            width: 100%;
+            margin-top: 48px;
+    }
+    }
+  
+  
+
+}

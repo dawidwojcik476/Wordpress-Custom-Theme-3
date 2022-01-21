@@ -1,0 +1,316 @@
+.contact {
+    margin-top: 120px;
+
+    &__top {
+        display: flex;
+        position: relative;
+        padding-bottom: 48px;
+
+        &-left {
+            width: 50%;
+            display: flex;
+            @media (max-width:1000px) {
+    
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+            }
+        }
+
+        &-header {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @media (max-width:1000px) {
+    align-items: center;
+              
+            }
+
+            h3 {
+                color: #64B0B8;
+                font-weight: 700;
+                font-size: 32px;
+                @media (max-width:1000px) {
+                  
+                              
+                                    text-align: center;
+                               
+                            }
+            }
+
+            p {
+                font-size: 20px;
+                color: #64B0B8;
+                font-weight: 500;
+            }
+        }
+
+        &-right {
+            img {
+                width: 180px;
+            }
+            @media (max-width:1000px) {
+    
+                display: none;
+                
+            }
+         
+        }
+
+        &::after {
+            content: '';
+            width: 80vw;
+            border-bottom: 2px dashed #FCB0B5;
+            position: absolute;
+            bottom: 0;
+        
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__bottom {
+        display: flex;
+
+        @media (max-width:1000px) {
+    
+            flex-direction: column;
+            align-items: center;
+            
+        }
+
+        &-left {
+            width: 50%;
+            @media (max-width:1000px) {
+    
+                width: 100%;
+
+                
+            }
+            .wpcf7 {
+                form {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    p {
+                        width: 35%;
+
+                        &:nth-child(2) {
+                            width: 100%;
+
+                        }
+
+                        &:nth-child(5),
+                        &:nth-child(6),
+                        &:nth-child(7) {
+                            width: 100%;
+
+                        }
+
+                        &:nth-child(6) {
+                            color: #B5B5B5;
+                            font-size: 16px;
+                            position: relative;
+                            top: -41px;
+                        }
+
+                        .wpcf7-submit {
+                            font-size: 20px;
+                            font-weight: 900;
+                            color: white;
+                            text-transform: uppercase;
+                            background: #FEB9BD;
+                            border: 0;
+                            padding: 10px 35px;
+                            border-radius: 30px;
+                            transition: 0.3s;
+                            cursor: pointer;
+                            text-decoration: none;
+
+                            @media (max-width:1200px) {
+                                font-size: 16px;
+                                padding: 10px 20px;
+                            }
+
+                            &:hover {
+                                background: #64B0B8;
+                            }
+                        }
+
+                        @media (max-width:1750px) {
+                            width: 100%;
+                        }
+                    }
+
+                    .wpcf7-acceptance {
+                        .wpcf7-list-item {
+                            margin-left: 0;
+
+                            label {
+                                display: flex;
+                                align-items: center;
+
+                                .wpcf7-list-item-label {
+                                    margin-left: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                input[type="checkbox"] {
+                    /* Add if not using autoprefixer */
+                    -webkit-appearance: none;
+                    /* Remove most all native input styles */
+                    appearance: none;
+                    /* For iOS < 15 */
+                    background-color: white;
+                    /* Not removed via appearance */
+                    margin: 0;
+
+                    font: inherit;
+                    color: #64B0B8;
+                    width: 1.15em;
+                    height: 1.15em;
+                    border: 0.15em solid #64B0B8;
+                    border-radius: 0.15em;
+                    transform: translateY(-0.075em);
+
+                    display: grid;
+                    place-content: center;
+                }
+
+                input[type="checkbox"]::before {
+                    content: "";
+                    width: 0.65em;
+                    height: 0.65em;
+                    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+                    transform: scale(0);
+                    transform-origin: bottom left;
+                    transition: 120ms transform ease-in-out;
+                    box-shadow: inset 1em 1em #64b0b8;
+                    /* Windows High Contrast Mode */
+                    background-color: CanvasText;
+                }
+
+                input[type="checkbox"]:checked::before {
+                    transform: scale(1);
+                }
+
+                input[type="checkbox"]:focus {
+                    outline: 2px solid #64B0B8;
+                    outline-offset: 2px 0.15em;
+                }
+
+
+
+
+                .wpcf7-text {
+                    max-width: 240px;
+                    padding: 10px;
+                    padding-left: 20px;
+                    border: 2px solid #FEB9BD;
+                    border-radius: 40px;
+                    @media (max-width:1000px) {
+    
+                        max-width: 100%;
+        
+                        
+                    }
+                }
+
+                .wpcf7-textarea {
+                    padding-top: 20px;
+                    padding-left: 30px;
+                    border: 2px solid #FEB9BD;
+                    border-radius: 40px;
+                    height: 60%;
+                    width: 80%;
+                    @media (max-width:1000px) {
+    
+                        width: 100%;
+        
+                        
+                    }
+                }
+            }
+        }
+
+        &-right {
+            display: flex;
+            width: 50%;
+            @media (max-width:1000px) {
+    
+                width: 100%;
+
+                justify-content: center;
+                
+            }
+            @media (max-width:500px) {
+                  
+                              
+                flex-direction: column;
+           
+        }
+        }
+
+
+    }
+    &__info {
+        &-leftside {
+            width: 40%;
+            @media (max-width:500px) {
+                  
+                              
+                width: 100%;
+           
+        }
+        }
+    }
+
+    &__adress,
+    &__phone,
+    &__email,
+    &__hours {
+        display: flex;
+        margin-top: 35px;
+        color: #B5B5B5;
+        font-size: 16px;
+
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        .openhours-block{
+            display: flex;
+            p:nth-child(1) {
+                margin-right: 20px;
+            }
+        }
+    }
+
+    &__adress {
+        img {
+            width: 27px;
+            height: 32px;
+        }
+    }
+
+    &__phone,
+    &__hours {
+        img {
+            width: 27px;
+            height: 27px;
+        }
+    }
+
+  
+    &__email {
+        width: 27px;
+        height: 22px;
+    }
+}

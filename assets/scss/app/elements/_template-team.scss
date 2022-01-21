@@ -1,0 +1,408 @@
+.team {
+    &__header {
+        margin-bottom: 120px;
+&::before {
+    content: '';
+    display: block;
+    background-image: url(../images/gwiazdkitło.png);
+    background-size: 96vw;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    bottom: -156px;
+    left: 2vw;
+}
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #64B0B8;
+            text-align: center;
+            padding: 60px 0px;
+
+            @media (max-width:1200px) {
+                font-size: 25px;
+
+            }
+        }
+
+        &::after {
+            content: '';
+            width: 80vw;
+            border-bottom: 2px dashed #112818;
+            display: block;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__list {
+        max-width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
+
+        &-item {
+            margin-bottom: 70px;
+
+            &-content {
+                margin-left: 30px;
+            }
+
+            &-image {
+
+
+                border-radius: 50%;
+                position: relative;
+
+
+
+                @keyframes rotating {
+                    100% {
+                        -webkit-transform: rotate(360deg);
+                    }
+                }
+
+                &::after {
+                    content: '';
+                    border: 2px dashed #5CA7AF;
+                    background: #F6F1D8;
+                    width: 110%;
+                    height: 109%;
+                    position: absolute;
+                    border-radius: 50%;
+                    top: -7%;
+                    left: -6.5%;
+                    animation: spin 120s linear infinite;
+                }
+
+                img {
+                    width: 170px;
+                    height: 170px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    z-index: 10;
+                    position: relative;
+
+
+                }
+
+            }
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            width: 80vw;
+
+            a {
+                width: 50%;
+                text-decoration: none;
+
+                @media (max-width:1100px) {
+                    width: 100%;
+                    justify-content: center;
+                }
+            }
+
+            li {
+
+                display: flex;
+                align-items: center;
+
+                @media (max-width:1100px) {
+                    width: 100%;
+                    justify-content: center;
+                }
+
+                .membername {
+                    font-size: 32px;
+                    font-weight: 700;
+                    color: #64B0B8;
+                    margin-bottom: 20px;
+
+                    @media (max-width:1200px) {
+                        font-size: 25px;
+
+                    }
+
+
+                }
+
+                .memberexcerpt {
+                    color: #B5B5B5;
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+
+.single-member {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    &::after {
+        content: '';
+        display: block;
+        background-image: url(../images/gwiazdkitło.png);
+        background-size: 96vw;
+        background-repeat: no-repeat;
+        position: absolute;
+        height: 100%;
+        width: 100vw;
+        bottom: 12px;
+        left: 2vw;
+    }
+    &::before {
+        content: '';
+        width: 80vw;
+        border-top: 2px dashed #112818;
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__top {
+        display: flex;
+        margin-top: 80px;
+
+        @media (max-width:1500px) {
+            max-width: 90vw;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width:900px) {
+            flex-direction: column;
+            margin-left: auto;
+            margin-right: auto;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__photo {
+        border-radius: 50%;
+        position: relative;
+        width: 230px;
+        height: 237px;
+
+
+
+        @keyframes rotating {
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        &::after {
+            content: '';
+            border: 2px dashed #5CA7AF;
+            background: #F6F1D8;
+            width: 110%;
+            height: 109%;
+            position: absolute;
+            border-radius: 50%;
+            top: -7%;
+            left: -6.5%;
+            animation: spin 120s linear infinite;
+        }
+
+        img {
+            width: 230px;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 50%;
+            z-index: 10;
+            position: relative;
+
+
+        }
+
+
+    }
+
+    &__description {
+        margin-left: 120px;
+
+        @media (max-width:900px) {
+            margin-left: 0;
+        }
+
+        h3 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #64B0B8;
+            margin-bottom: 20px;
+
+            @media (max-width:1200px) {
+                font-size: 25px;
+
+            }
+
+
+        }
+
+        p {
+            color: #B5B5B5;
+            font-size: 16px;
+            font-weight: 400;
+            text-decoration: none;
+        }
+
+        .descript {
+            margin-top: 20px;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        margin-top: 120px;
+
+        @media (max-width:1500px) {
+            max-width: 90vw;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width:900px) {
+            flex-direction: column;
+            margin-top: 40px;
+        }
+
+    }
+
+    &__specs,
+    &__atributes {
+        width: 50%;
+
+        @media (max-width:900px) {
+            width: 100%;
+        }
+    }
+
+    &__specs {
+        h3 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #64B0B8;
+            margin-bottom: 20px;
+
+            @media (max-width:1200px) {
+                font-size: 25px;
+
+            }
+
+        }
+
+        .specsdescript {
+            color: #B5B5B5;
+            font-size: 16px;
+            font-weight: 400;
+            text-decoration: none;
+            width: 90%;
+        }
+    }
+
+    &__atributes {
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #64B0B8;
+            margin-bottom: 20px;
+
+            @media (max-width:1200px) {
+                font-size: 25px;
+
+            }
+
+        }
+
+        @media (max-width:900px) {
+
+            margin-top: 40px;
+        }
+
+    }
+
+    &__points {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    &__icon {
+        background: white;
+        border-radius: 50%;
+        position: relative;
+        border: 2px dashed #FCB0B5;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @keyframes rotating {
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+
+
+        }
+    }
+
+    &__point {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 25%;
+        margin-top: 20px;
+        margin-bottom: 10px;
+
+        @media (max-width:1200px) {
+            width: 33%;
+
+        }
+
+        @media (max-width:550px) {
+            width: 50%;
+
+        }
+    }
+
+    &__atribute {
+        p {
+            color: #B5B5B5;
+            font-size: 16px;
+            font-weight: 400;
+            text-decoration: none;
+            margin-top: 12px;
+        }
+    }
+}
+
+.team .news {
+    @media (max-width:900px) {
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+    }
+    padding:0;
+  
+}

@@ -1,0 +1,293 @@
+.offer {
+    &__cost {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        &-price {
+            background: #64B0B8;
+            padding: 31px;
+            border-radius: 50%;
+            position: relative;
+            width: 160px;
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @media (max-width:1100px) {
+                padding: 20px;
+            }
+
+            @keyframes rotating {
+                100% {
+                    -webkit-transform: rotate(360deg);
+                }
+            }
+
+            &::after {
+                content: '';
+                border: 3px dashed #FCB0B5;
+                width: 120%;
+                height: 120%;
+                position: absolute;
+                border-radius: 50%;
+                top: -12%;
+                left: -12%;
+                animation: spin 120s linear infinite;
+            }
+
+
+            p {
+                font-size: 32px;
+                color: white;
+            }
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 25%;
+            margin-bottom: 50px;
+
+            @media (max-width: 1200px) {
+                width: 32%;
+            }
+
+            @media (max-width: 900px) {
+                width: 50%;
+            }
+
+            @media (max-width: 450px) {
+                width: 100%;
+            }
+        }
+
+        &-title {
+            margin-top: 35px;
+
+            p {
+                color: #61ABB2;
+                text-align: center;
+            }
+        }
+    }
+
+    .birthoffer {
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            background-image: url(../images/gwiazdytło2.png);
+            background-size: 96vw;
+            background-repeat: no-repeat;
+            position: absolute;
+            height: 155%;
+            width: 102vw;
+            bottom: 44px;
+            left: -8vw;
+            @media (max-width:1600px) {
+                left:0;
+            }
+        }
+        &__blocks {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+       
+        }
+      
+        &__block {
+
+            background: #FEB9BD;
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 17px;
+
+
+            &-header {
+                font-size: 20px;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 18px 0;
+
+                p {
+                    font-weight: 700;
+                }
+            }
+
+            &:nth-child(1) {
+                border-radius: 30px 0px 0px 30px;
+            }
+
+            &:nth-last-child(1) {
+                border-radius: 0px 30px 30px 0px;
+            }
+
+            @media(max-width:1200px) {
+                width: 32%;
+
+                &:nth-child(1) {
+                    border-radius: 0px
+                }
+
+
+                &:nth-last-child(1) {
+                    border-radius: 0px;
+                }
+            }
+
+            @media(max-width:900px) {
+                width: 50%;
+                margin-bottom: 20px;
+
+            }
+
+            @media(max-width:500px) {
+                width: 100%;
+                border-radius: 30px;
+
+                &:nth-child(1) {
+                    border-radius: 30px
+                }
+
+
+                &:nth-last-child(1) {
+                    border-radius: 30px;
+                }
+            }
+
+            &-content {
+                height: 700px;
+                width: 100%;
+                background-color: #F5F5F5;
+                display: flex;
+                flex-direction: column;
+                padding-left: 10%;
+
+                @media(max-width:500px) {
+                    height: auto;
+                    padding-bottom: 30px;
+
+                }
+
+                p {
+                    margin-top: 32px;
+                    color: #61ABB2;
+                    font-size: 16px;
+                    max-width: 270px;
+                }
+            }
+        }
+
+
+    }
+
+    .moveoffer {
+
+        &__header {
+            h2 {
+                &::after {
+                    content: '';
+                    display: block;
+                    background-image: url(../images/gwiazdkitło.png);
+                    background-size: 96vw;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    height: 150%;
+                    width: 102vw;
+                    bottom: -152px;
+                    left:-8vw;
+                    @media (max-width:1600px) {
+                        left:0;
+                    }
+                }
+            }
+        }
+        &__blocks {
+            display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+        }
+
+        &__block {
+            width: 30%;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+            @media (max-width:1300px) {
+                width: 50%;
+            }
+
+            @media (max-width:900px) {
+                width: 100%;
+            }
+            &-header {
+                position: relative;
+                width: 396px;
+                height: 296px;
+                @media (max-width:600px) {
+                    width: 100%;
+                }
+                img {
+                    width: 396px;
+                    height: 296px;
+                    object-fit: cover;
+                    border-radius: 40px;
+                    @media (max-width:600px) {
+                        width: 100%;
+                    }
+
+                }
+
+                p {
+                    position: absolute;
+                    z-index: 11;
+                    left: 50%;
+                    transform: translate(-50%);
+                    transform: translateY(-50%) translateX(-50%);
+                    top: 50%;
+                    font-size: 20px;
+                    color: #64B0B8;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                }
+
+                &::after {
+                    content: '';
+                    background: #ffc0cbe8;
+                    display: block;
+                    position: absolute;
+                    z-index: 10;
+                    width: 396px;
+                    height: 296px;
+                    border-radius: 40px;
+                    top: 0;
+                    @media (max-width:600px) {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &-content {
+              max-width: 400px;
+                margin-top: 38px;
+                p {
+                    text-align: center;
+                    font-size: 16px;
+                    color:#64B0B8;
+                }
+            }
+        }
+    }
+}
